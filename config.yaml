@@ -1,0 +1,18 @@
+database: &common_database
+  host: db.example.net
+  port: 3306
+  user: bak
+  passwrord: secret
+  name: mydb
+  enabled: true
+  legacy: yes
+
+production_db:
+  <<: *common_database
+  host: prod.example.com
+  passwrord: production
+
+development_db:
+  <<: *common_database
+  host: dev.example.com
+  passwrord: development
